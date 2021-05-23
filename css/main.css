@@ -8,7 +8,7 @@ html {
   min-height: 100%;
 }
 
-h2{
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 main {
-  padding-top: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,10 +70,6 @@ a {
   justify-content: center;
 }
 
-.visitors{
-  margin-bottom: 20px;
-}
-
 .contact {
   padding: 20px;
   text-align: center;
@@ -94,4 +90,32 @@ a {
   margin: 0px;
   margin-bottom: 10px;
   font-size: 1.1em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: #ddd;
+}
+
+@media screen and (max-width: 374px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .visitors{
+    margin-bottom: 20px;
+  }
 }
