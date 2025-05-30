@@ -13,11 +13,6 @@ html {
   --bg-color: #f5f7fe;
   --light-blue: #5296cf;
   --dark-primary: #33485d;
-  --bg-color: #f5f7fe;
-  --green: #28a745;
-  --teal: #20c997;
-  --mobile-breakpoint: 768px;
-  --tablet-breakpoint: 1024px;
 }
 
 /* === ScrollBar === */
@@ -70,11 +65,11 @@ body {
   flex-direction: column;
   margin: 0;
   background-color: var(--bg-color);
-  color: #33485d;
+  color: var(--dark-primary);
 }
 
 header {
-  background-color: #33485d;
+  background-color: var(--dark-primary);
   color: #fff;
   box-shadow: rgb(204, 204, 204) 1px 2px 3px 0px;
   display: flex;
@@ -166,7 +161,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  color: #33485d;
+  color: var(--dark-primary);
   width: 100%;
   max-width: 700px;
   padding: 20px;
@@ -201,7 +196,7 @@ main {
 }
 
 footer {
-  background-color: #33485d;
+  background-color: var(--dark-primary);
   color: #fff;
   box-shadow: rgb(204, 204, 204) 1px 2px 3px 0px;
   display: flex;
@@ -249,7 +244,7 @@ footer {
     color: #fff;
 
     &:hover {
-      background-color: #5296cf;
+      background-color: var(--light-blue);
       color: #fff;
     }
   }
