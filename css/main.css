@@ -236,16 +236,17 @@ footer {
       }
     }
   }
+}
 
-  .privacy-link {
-    border-radius: 10px;
-    padding: 5px 10px;
-    transition: all ease 0.3s;
+.about-link,
+.privacy-link {
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: all ease 0.3s;
+  color: #fff;
+
+  &:hover {
+    background-color: var(--light-blue);
     color: #fff;
-
-    &:hover {
-      background-color: var(--light-blue);
-      color: #fff;
-    }
   }
 }
