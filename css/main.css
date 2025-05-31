@@ -241,15 +241,15 @@ footer {
 @keyframes pulse-glow {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(82, 150, 207, 0.7);
+    border: 2px solid rgba(82, 150, 207, 0);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 10px 3px rgba(82, 150, 207, 0.5);
+    border: 2px solid rgba(82, 150, 207, 1);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(82, 150, 207, 0.7);
+    border: 2px solid rgba(82, 150, 207, 0);
   }
 }
 
@@ -262,7 +262,7 @@ footer {
 }
 
 .about-link {
-  animation: pulse-glow 2s infinite;
+  animation: pulse-glow 4s infinite;
 }
 
 .about-link:hover {
