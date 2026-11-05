@@ -1,0 +1,25 @@
+# س — Seen Arabic
+
+> The official homepage for Seen Arabic and its public Arabic-language projects.
+
+The team's stated goal is to share knowledge with Arabic-speaking communities.
+The About page describes the team, its history and the open-source Arabic
+Services project.
+
+## Origin pages
+
+- [Home](https://seen-arabic.github.io/): the organization homepage and project directory.
+- [About Seen Arabic](https://seen-arabic.github.io/about.html): the team's history and Arabic Services overview.
+- [Privacy policy](https://seen-arabic.github.io/privacy.html): the origin site's privacy statement.
+
+## Public projects
+
+- [Seen Arabic blog](https://seen-arabic.github.io/blog/): Arabic-language articles.
+  - [Blog AI-readable index](https://seen-arabic.github.io/blog/llms.txt)
+  - [Blog full text](https://seen-arabic.github.io/blog/llms-full.txt)
+- [Arabic Services website](https://seen-arabic.github.io/Arabic-Services/): browser-based tools for Arabic text.
+  - [Website AI-readable index](https://seen-arabic.github.io/Arabic-Services/llms.txt)
+  - [Website full text](https://seen-arabic.github.io/Arabic-Services/llms-full.txt)
+- [JavaScript package source](https://github.com/Seen-Arabic/Arabic-Services-JavaScript)
+- [Java package source](https://github.com/Seen-Arabic/Arabic-Services-Java)
+- [Public API documentation](https://arabic-services-api-v1.onrender.com/docs)

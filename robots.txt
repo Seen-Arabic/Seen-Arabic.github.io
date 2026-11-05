@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seen-arabic.github.io/sitemap.xml
+Sitemap: https://seen-arabic.github.io/blog/sitemap.xml
+Sitemap: https://seen-arabic.github.io/Arabic-Services/sitemap.xml
