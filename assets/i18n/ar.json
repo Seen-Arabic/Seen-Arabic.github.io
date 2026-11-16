@@ -1,0 +1,45 @@
+{
+  "brand": {
+    "name": "س",
+    "latinName": "Seen",
+    "fullName": "س - Seen",
+    "slogan": "هدفنا نشر العلم والمعرفة بين مجتمعاتنا العربية."
+  },
+  "nav": {
+    "skipToContent": "انتقل إلى المحتوى",
+    "home": "الرئيسية",
+    "blog": "المدونة",
+    "arabicServices": "خدمات اللغة العربية",
+    "about": "من نحن",
+    "privacy": "سياسة الخصوصية",
+    "ariaPrimary": "التنقل الرئيسي",
+    "ariaHome": "س - Seen، الصفحة الرئيسية"
+  },
+  "footer": {
+    "linksAria": "روابط الموقع",
+    "socialAria": "روابط التواصل",
+    "contactTitle": "للتواصل والاقتراحات",
+    "appInstall": "تحميل التطبيق",
+    "installError": "تعذر بدء تثبيت التطبيق. حاول مجدداً عند ظهور خيار التثبيت.",
+    "blogCopyright": "س - Seen جميع الحقوق محفوظة {{ year }} ©"
+  },
+  "tools": {
+    "inputLabel": "النص العربي",
+    "outputLabel": "النص الناتج",
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "share": "مشاركة",
+    "copyManual": "النسخ التلقائي غير متاح. حُدد النص لنسخه يدويًا.",
+    "copyFailed": "تعذر النسخ تلقائيًا. حُدد النص لنسخه يدويًا.",
+    "convertFailed": "تعذر تحويل النص. حاول مرة أخرى."
+  },
+  "blog": {
+    "readMore": "أكمل القراءة",
+    "articlesTitle": "المقالات",
+    "author": "الكاتب",
+    "published": "نُشر بتاريخ",
+    "updated": "تاريخ التحديث",
+    "copyLink": "نسخ الرابط",
+    "linkCopied": "تم نسخ الرابط بنجاح"
+  }
+}

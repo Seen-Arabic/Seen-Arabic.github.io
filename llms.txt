@@ -1,25 +1,26 @@
-# س — Seen Arabic
+# س | Seen Arabic
 
-> The official homepage for Seen Arabic and its public Arabic-language projects.
+> هدفنا نشر العلم والمعرفة بين مجتمعاتنا العربية.
 
-The team's stated goal is to share knowledge with Arabic-speaking communities.
-The About page describes the team, its history and the open-source Arabic
-Services project.
+## Pages
 
-## Origin pages
+- [Home](https://seen-arabic.github.io/)
+- [About Seen Arabic](https://seen-arabic.github.io/about/)
+- [Privacy policy](https://seen-arabic.github.io/privacy/)
+- [Arabic Services tools](https://seen-arabic.github.io/Arabic-Services/)
+- [Blog](https://seen-arabic.github.io/blog/)
 
-- [Home](https://seen-arabic.github.io/): the organization homepage and project directory.
-- [About Seen Arabic](https://seen-arabic.github.io/about.html): the team's history and Arabic Services overview.
-- [Privacy policy](https://seen-arabic.github.io/privacy.html): the origin site's privacy statement.
+## Blog articles
 
-## Public projects
+- [تاريخ الخط العربي منذ ظهور الإسلام](https://seen-arabic.github.io/blog/arabic-script-history/): رحلة تطور الخط العربي من الكتابة بلا نقط أو تشكيل إلى جهود أبي الأسود الدؤلي ونصر بن عاصم والخليل بن أحمد.
 
-- [Seen Arabic blog](https://seen-arabic.github.io/blog/): Arabic-language articles.
-  - [Blog AI-readable index](https://seen-arabic.github.io/blog/llms.txt)
-  - [Blog full text](https://seen-arabic.github.io/blog/llms-full.txt)
-- [Arabic Services website](https://seen-arabic.github.io/Arabic-Services/): browser-based tools for Arabic text.
-  - [Website AI-readable index](https://seen-arabic.github.io/Arabic-Services/llms.txt)
-  - [Website full text](https://seen-arabic.github.io/Arabic-Services/llms-full.txt)
-- [JavaScript package source](https://github.com/Seen-Arabic/Arabic-Services-JavaScript)
-- [Java package source](https://github.com/Seen-Arabic/Arabic-Services-Java)
-- [Public API documentation](https://arabic-services-api-v1.onrender.com/docs)
+## Project documentation
+
+- [Arabic Services JavaScript package documentation](https://github.com/Seen-Arabic/Arabic-Services-JavaScript#readme)
+- [Arabic Services JavaScript documentation index](https://github.com/Seen-Arabic/Arabic-Services-JavaScript/blob/main/docs/README.md)
+- [Arabic Services API documentation](https://arabic-services-api-v1.onrender.com/docs)
+
+- [Blog AI-readable index](https://seen-arabic.github.io/blog/llms.txt)
+- [Blog full text](https://seen-arabic.github.io/blog/llms-full.txt)
+- [Arabic Services AI-readable index](https://seen-arabic.github.io/Arabic-Services/llms.txt)
+- [Arabic Services full text](https://seen-arabic.github.io/Arabic-Services/llms-full.txt)

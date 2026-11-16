@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>س | Seen Arabic</title>
+  <id>https://seen-arabic.github.io/blog/</id>
+  <link href="https://seen-arabic.github.io/blog/"/>
+  <link rel="self" href="https://seen-arabic.github.io/blog/feed.xml"/>
+  <updated>2024-11-01T00:00:00Z</updated>
+  <entry>
+    <title>تاريخ الخط العربي منذ ظهور الإسلام</title>
+    <id>https://seen-arabic.github.io/blog/arabic-script-history/</id>
+    <link href="https://seen-arabic.github.io/blog/arabic-script-history/"/>
+    <published>2024-11-01T00:00:00Z</published>
+    <updated>2024-11-01T00:00:00Z</updated>
+    <author><name>يوسف محمد</name><uri>https://youssefmo7amed.github.io/portfolio/</uri></author>
+    <summary>رحلة تطور الخط العربي من الكتابة بلا نقط أو تشكيل إلى جهود أبي الأسود الدؤلي ونصر بن عاصم والخليل بن أحمد.</summary>
+    <content type="html">&lt;p&gt;منذ بداية الإسلام، اتخذ الخط العربي رحلة فريدة من نوعها، حيث تطور ليصبح أداة دقيقة للتعبير والكتابة. كان الهدف الأساسي من هذا التطور هو تسهيل قراءة القرآن وحمايته من أي خطأ أو لحن، مما أدى إلى إحداث تغييرات جذرية في كيفية كتابة الحروف وتحديد الحركات. بدأ الخط بلا نقط أو تشكيل، ثم تطور بفضل علماء عظام مثل &lt;strong&gt;أبي الأسود الدؤلي&lt;/strong&gt; و&lt;strong&gt;نصر بن عاصم&lt;/strong&gt; و&lt;strong&gt;الخليل بن أحمد الفراهيدي&lt;/strong&gt;، ليصل إلى ما نعرفه اليوم.&lt;/p&gt;
+&lt;h3&gt;الخط العربي وقت الإسلام&lt;/h3&gt;
+&lt;p&gt;كانت تُكتب العربية قديمًا دونَ نَقطٍ أو تشكيل&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/message_from_prophet.webp&quot; alt=&quot;رسالة النبي ﷺ إلى هرقل&quot; width=&quot;845&quot; height=&quot;475&quot; loading=&quot;eager&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;رسالة النبي إلى هرقل&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/bismillah_no_dots.png&quot; alt=&quot;بسم الله الرحمن الرحيم (البسملة) دون نقط&quot; width=&quot;777&quot; height=&quot;233&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;بسم الله الرحمن الرحيم (البسملة) دون نقط&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;مثلًا جملة: &amp;quot;ٮٮٮٮوا مں الحٮر&amp;quot; تَحتمِل جملتين:&lt;/p&gt;
+&lt;p&gt;إما &amp;quot;تبينوا مِن الخَبَر&amp;quot; وإما &amp;quot;تثبتوا مِن الحبر&amp;quot;
+حسنًا كيف كان العربُ قديمًا يميزون بينهم؟
+الإجابة ببساطة بالفطرة أو السليقة اللغوية بمعنى أدق وفهمهم للسياق. مع دخول ألسنة غير عربية للإسلام وبِدئ اللحن في اللغة.. لاحظ هذا الإمام والصحابي الجليل &lt;strong&gt;عليُّ بن أبي طالب&lt;/strong&gt; (رضي الله عنه)
+فوًّجه عالم من علماء المسلمين المخضرمين و مؤسس علم النحو وهو أبو الأسود الدؤلي&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;أبي الأسود الدؤلي (ت 69 هـ)&lt;/h3&gt;
+&lt;p&gt;قد أسلم أبي الأسود الدؤلي ولكنه لم يرَ النبي-ص-وهو من ساداتِ التابعين وأعيانِهم وفقهائهم وشعرائهم.
+وَضَعَ أبو الأسود نظامًا مبتكرًا إذ قال لكاتبه إذا وجدتني أضم شفتي بالحرف فضع نقطةً إلى جواره.. وإذا وجدتني أفتح شفتيَّ بالحرف فضع نقطةً أعلاها.. وإذا وجدتني أكسر شفتيَّ بالحرف فضع نقطةً أسفله مثل الموضح في الصورة أدناه للبسملة !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/diacritic_example.png&quot; alt=&quot;الدؤلي_بسم_الله.png&quot; width=&quot;885&quot; height=&quot;191&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+&lt;p&gt;وهذا يُسمى (نَقْط الإعراب) أي النقط الخاص بمخارج اللفظ (الضم والفتح والكسر) الذي أصبح في ما بعد ( َ ُ ِ).. إذ أنه يبين أواخر الكلمات (كما في صورة السابقة)
+تتلمذ على يد أبي الأسود الدؤلي كثيرون كان من أنبلهم &lt;strong&gt;نصر بن عاصم الليثي&lt;/strong&gt; (ت 89 هـ)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;نصر بن عاصم الليثي (ت 89 هـ)&lt;/h3&gt;
+&lt;p&gt;قد كان فقيها فصيحاً عالماً بالعربية ويعدّ من علماء النحو المبرزين في زمانه حتى أنه نُسب إليه -بالخطأ- أنه مؤسس علم النحو والصواب أنه من أول من أخـذ النحو عن أبي الأسود، وفتق فيه القياس.
+إكمالًا لدرب شيخه في العناية بالعربية ابتكر الليثي طريقة للتيسر أكثر على الأعاجم الداخلين للإسلام حديثًا فقد وضع النقاط فوق الحروف.. تلك النقاط التي تميز بين المتشابهات منها&lt;/p&gt;
+&lt;p&gt;فمثلًا (ٮ) تُستخدم لثلاثة حروف (ب ت ث)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;وضع تحت الباء نقطة فأصبحت (ب)&lt;/li&gt;
+&lt;li&gt;ووضع فوق التاء إثنتين فأصبحت (ت)&lt;/li&gt;
+&lt;li&gt;ووضع فوق الثاء ثلاث فأصبحت (ث)&lt;/li&gt;
+&lt;li&gt;وهكذا مع باقي الحروف المتشابهة الشكل
+مثل:
+ج ح خ - د ذ - ر ز - س ش - ص ض - ط ظ - ع غ - ى ي
+وسُميت هذه الطريقة (نَقْط الإعجام)
+فأصبح عندنا نوعان للنقط&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/diacritic_laithi.png&quot; alt=&quot;الليثي_بسم_الله.png&quot; width=&quot;889&quot; height=&quot;290&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;نقط الإعراب&lt;/strong&gt;: وهو العلامات الدالة على ما يعرض للحرف من حركة أو شد أو مد أو سكون أو تنوين (باللون الأسود)..&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;نقط الإعجام&lt;/strong&gt;: وهو النقط الذي يدل على ذوات الحروف، ويميز معجمَها من مهملها، كالنقطة تحت الجيم ميَّزتها من الحاء، والنقطتان فوق ت ميَّزتها من ث (باللون الأحمر).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;لكن هنا ظَهرت مشكلة وهي كثرة النقاط وكيفية التمييز بين نقط الإعراب ونقط الإعجام؟ صار نَصُّ الإعراب يُكتب باللون الأحمر ونقط الإعجام يكتب باللون الأسود (كما بالصورة السابقة).
+وكعادة هذه اﻷمة في تعلم العلم وتعليمه.. فقد تتلمذ على يد الليثي أيضًا علماء أجلاء نقلوا العلم وأضافوا له حتى جاء بعد بضعة عشر سنة عالم من أهم العلماء ليس في عصره فقط بل في تاريخ اللغة العربية هو &lt;strong&gt;الخليل بن أحمد الفراهيدي&lt;/strong&gt; (ت 173هـ)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;الخليل بن أحمد الفراهيدي (ت 163 هـ)&lt;/h3&gt;
+&lt;p&gt;يل عنه: &amp;quot;كَانَ رَأْساً فِي لِسَانِ العَرَبِ&amp;quot;.. و&amp;quot; صاحب العربية،&amp;quot; وهو مُنشئ علم العَروض وكتاب العين الذي يُعد أول معجم للعربية وهو أستاذ &lt;strong&gt;سيبويه&lt;/strong&gt; في النحو.
+الآن قد وصلنا للمرحلة الأخيرة التي تشكل نواة الكتابة العربية الحديثة (الكتابة التي نعرفها اليوم بالتشكيل) بعدما ظهر لَبسٌ بين نَقْط الإعراب (الذي باللون الأحمر) ونَقْط الإعجام (الذي باللون الأسود)..&lt;/p&gt;
+&lt;p&gt;استبدل بنقط الإعجام التشكيل.. فوضع&lt;/p&gt;
+&lt;p&gt;الضمة ( ُ).. والفتحة ( َ).. والكسرة ( ِ).. والسكون ( ْ)..&lt;/p&gt;
+&lt;p&gt;ووضع أيضًا الهمزات (ء أ إ ئ ؤ).. وحرف المد (آ).. والشدة ( ّ)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/farahidi_bismillah.png&quot; alt=&quot;الفراهيدي_بسم_الله.png&quot; width=&quot;885&quot; height=&quot;353&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+&lt;p&gt;هذا غير العلوم التي لم يتحدث فيها أحدٌ قبله.. مثل عِلم العَروض وعلم الصوتيات.. فكان أول من تحدث عن مخارج الحروف في معجمه.. معجم العين .&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;الخلاصة&lt;/h3&gt;
+&lt;p&gt;مر الخط العربي بتطورات عديدة وكان الهدف الرئيسي دائمًا هو خدمة القرآن الكريم وحفظه من أي لَحنٍ أو خطأ في القراءة فمنذ ظهور الإسلام تطور الخط على مراحل&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;كانت الكتابة دون نقطٍ أو همزات أو تشكيل&lt;/li&gt;
+&lt;li&gt;أضاف &lt;strong&gt;أبو الأسود الدؤلي&lt;/strong&gt; إلى الخط ما يسمى &lt;strong&gt;نَقط الإعراب&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;ثم أكمل تلميذه &lt;strong&gt;نصر بن عاصم الليثي&lt;/strong&gt; بعده وأضاف &lt;strong&gt;نَقط الإعجام&lt;/strong&gt; ليفرق بين الحروف المتشابهات واختار اللون الأحمر (لنقط الإعراب)واللون الأسود(لنقط الإعجام).&lt;/li&gt;
+&lt;li&gt;ثم فك اللبس تمامًا بعدهما &lt;strong&gt;الخليل بن أحمد الفراهيدي&lt;/strong&gt; وأضاف التشكيل الذي نستخدمه إلى يومنا هذا&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/images/posts/bismillah_final.png&quot; alt=&quot;بسم_الله.png&quot; width=&quot;912&quot; height=&quot;1023&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>

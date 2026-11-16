@@ -1,0 +1,15 @@
+# Arabic Services | خدمات اللغة العربية
+
+> أدوات في المتصفح لمعالجة النصوص العربية.
+
+## Pages
+
+- [Arabic text tools](https://seen-arabic.github.io/Arabic-Services/)
+- [Privacy policy](https://seen-arabic.github.io/privacy/)
+- [About Seen Arabic](https://seen-arabic.github.io/about/)
+
+## Project documentation
+
+- [دليل خدمات اللغة العربية](https://seen-arabic.github.io/Arabic-Services/guide.txt)
+- [JavaScript package README](https://github.com/Seen-Arabic/Arabic-Services-JavaScript#readme)
+- [JavaScript package documentation index](https://github.com/Seen-Arabic/Arabic-Services-JavaScript/blob/main/docs/README.md)

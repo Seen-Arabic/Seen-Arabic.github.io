@@ -1,0 +1,13 @@
+# س | Seen Arabic | المدونة
+
+> هدفنا نشر العلم والمعرفة بين مجتمعاتنا العربية.
+
+## المقالات
+
+- [تاريخ الخط العربي منذ ظهور الإسلام](https://seen-arabic.github.io/blog/arabic-script-history/): رحلة تطور الخط العربي من الكتابة بلا نقط أو تشكيل إلى جهود أبي الأسود الدؤلي ونصر بن عاصم والخليل بن أحمد.
+  - [Markdown](https://seen-arabic.github.io/blog/arabic-script-history/index.md)
+
+## Markdown
+
+- [All articles](https://seen-arabic.github.io/blog/articles.md)
+- [Full text](https://seen-arabic.github.io/blog/llms-full.txt)

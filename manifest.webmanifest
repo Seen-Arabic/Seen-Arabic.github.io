@@ -1,0 +1,50 @@
+{
+  "name": "س - Seen",
+  "short_name": "Seen",
+  "description": "مبادرات ومشروعات س - Seen لنشر العلم والمعرفة بين مجتمعاتنا العربية.",
+  "lang": "ar",
+  "dir": "rtl",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "categories": ["education", "utilities", "tools", "productivity", "books", "language"],
+  "background_color": "#f5f7fe",
+  "theme_color": "#33485d",
+  "screenshots": [
+    {
+      "src": "/assets/pwa/screenshots/desktop.png",
+      "type": "image/png",
+      "sizes": "1440x900",
+      "form_factor": "wide",
+      "label": "الصفحة الرئيسية لموقع س"
+    },
+    {
+      "src": "/assets/pwa/screenshots/mobile.png",
+      "type": "image/png",
+      "sizes": "390x844",
+      "form_factor": "narrow",
+      "label": "أدوات خدمات اللغة العربية على الموبايل"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/assets/brand/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/seen-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

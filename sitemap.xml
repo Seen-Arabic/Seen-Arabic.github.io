@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://seen-arabic.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://seen-arabic.github.io/about.html</loc>
-  </url>
-  <url>
-    <loc>https://seen-arabic.github.io/privacy.html</loc>
-  </url>
+  <url><loc>https://seen-arabic.github.io/</loc></url>
+  <url><loc>https://seen-arabic.github.io/about/</loc></url>
+  <url><loc>https://seen-arabic.github.io/privacy/</loc></url>
+  <url><loc>https://seen-arabic.github.io/Arabic-Services/</loc></url>
+  <url><loc>https://seen-arabic.github.io/blog/</loc></url>
+  <url><loc>https://seen-arabic.github.io/blog/arabic-script-history/</loc></url>
 </urlset>
