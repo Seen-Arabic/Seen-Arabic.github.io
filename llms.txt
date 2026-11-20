@@ -12,6 +12,7 @@
 
 ## Blog articles
 
+- [معالجة النصوص العربية في JavaScript و Java بمكتبة arabic-services](https://seen-arabic.github.io/blog/arabic-text-processing-js-java/): دليل عملي للمطورين لمعالجة وتنظيف النصوص العربية في JavaScript و TypeScript و Java باستخدام مكتبة arabic-services مفتوحة المصدر.
 - [تاريخ الخط العربي منذ ظهور الإسلام](https://seen-arabic.github.io/blog/arabic-script-history/): رحلة تطور الخط العربي من الكتابة بلا نقط أو تشكيل إلى جهود أبي الأسود الدؤلي ونصر بن عاصم والخليل بن أحمد.
 
 ## Project documentation

@@ -4,7 +4,118 @@
   <id>https://seen-arabic.github.io/blog/</id>
   <link href="https://seen-arabic.github.io/blog/"/>
   <link rel="self" href="https://seen-arabic.github.io/blog/feed.xml"/>
-  <updated>2024-11-01T00:00:00Z</updated>
+  <updated>2026-11-19T00:00:00Z</updated>
+  <entry>
+    <title>معالجة النصوص العربية في JavaScript و Java بمكتبة arabic-services</title>
+    <id>https://seen-arabic.github.io/blog/arabic-text-processing-js-java/</id>
+    <link href="https://seen-arabic.github.io/blog/arabic-text-processing-js-java/"/>
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <author><name>عبدالرحمن بيومي</name><uri>https://abdelrahmanbayoumi.github.io/</uri></author>
+    <summary>دليل عملي للمطورين لمعالجة وتنظيف النصوص العربية في JavaScript و TypeScript و Java باستخدام مكتبة arabic-services مفتوحة المصدر.</summary>
+    <content type="html">&lt;p&gt;عند بناء محرك بحث عربي، أو نظام فهرسة للمحتوى، أو أداة لتحليل النصوص، يواجه المبرمجون غالباً مجموعة من التحديات المتكررة: الكلمة التي بها تشكيل لا تطابق الكلمة التي بدون تشكيل في قاعدة البيانات، وعلامة التطويـــــل (الكشيدة &lt;code&gt;ـ&lt;/code&gt;) تكسر مطابقة الكلمات، كما أن كتابة تعبيرات نمطية (Regex) سريعة غالباً ما تترك حالات استثنائية (&lt;code&gt;Edge Cases&lt;/code&gt;) في النصوص العربية.&lt;/p&gt;
+&lt;p&gt;يوفر فريق &lt;strong&gt;س - Seen&lt;/strong&gt; مكتبة &lt;strong&gt;&lt;code&gt;arabic-services&lt;/code&gt;&lt;/strong&gt; (خدمات اللغة العربية) مفتوحة المصدر بلغتي &lt;strong&gt;JavaScript / TypeScript&lt;/strong&gt; و &lt;strong&gt;Java&lt;/strong&gt; لمعالجة النصوص العربية بشكل مباشر ومختبر، مع إمكانية تجربة نفس الدوال مباشرة في المتصفح عبر صفحة &lt;a href=&quot;/Arabic-Services/&quot;&gt;خدمات اللغة العربية&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;التثبيت السريع&lt;/h3&gt;
+&lt;h4&gt;في JavaScript و TypeScript (Node.js والمتصفح)&lt;/h4&gt;
+&lt;p&gt;تعمل المكتبة بدون أي اعتماديات تشغيلية خارجية (&lt;code&gt;zero runtime dependencies&lt;/code&gt;)، وتدعم ES Modules و CommonJS و UMD:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Bash&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;npm install arabic-services&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وإذا أردت استخدامها مباشرة في المتصفح بدون أداة حزم (Bundler)، يمكنك تحميلها عبر CDN:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;HTML&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/arabic-services@1/dist/umd/arabic-services.umd.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;في Java (Maven و Gradle)&lt;/h4&gt;
+&lt;p&gt;أضف التبعية التالية إلى ملف &lt;code&gt;pom.xml&lt;/code&gt; في مشاريع Maven:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;XML&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;io.github.seen-arabic&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;arabic-services&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.0.1&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;أو في &lt;code&gt;build.gradle&lt;/code&gt; لمشاريع Gradle:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Gradle&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot;&gt;implementation &amp;#39;io.github.seen-arabic:arabic-services:1.0.1&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;أمثلة عملية لأهم الوظائف&lt;/h3&gt;
+&lt;h4&gt;1. إزالة التشكيل (&lt;code&gt;removeTashkeel&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تزيل هذه الدالة جميع حركات التشكيل (الفتحة، الضمة، الكسرة، الشدة، السكون، والتنوين) لتوحيد صيغة الكلمات قبل تخزينها أو البحث فيها.&lt;/p&gt;
+&lt;p&gt;في &lt;strong&gt;JavaScript / TypeScript&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { removeTashkeel } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(removeTashkeel(&amp;#39;الخَيْلُ وَاللّيْلُ وَالبَيْداءُ تَعرِفُني&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;import io.github.seen_arabic.arabic_services.ArabicServices;
+
+String result = ArabicServices.removeTashkeel(&amp;quot;الخَيْلُ وَاللّيْلُ وَالبَيْداءُ تَعرِفُني&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;الناتج:&lt;/strong&gt; الخيل والليل والبيداء تعرفني&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;2. إزالة التطويـــــل (&lt;code&gt;removeTatweel&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تنظّف النص العربي من علامة التطويل (الكشيدة &lt;code&gt;ـ&lt;/code&gt;) حتى لا تعيق البحث أو مطابقة الكلمات.&lt;/p&gt;
+&lt;p&gt;في &lt;strong&gt;JavaScript / TypeScript&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { removeTatweel } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(removeTatweel(&amp;#39;كن جميـــلا ترى الوجــود جميـــــلا&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String result = ArabicServices.removeTatweel(&amp;quot;كن جميـــلا ترى الوجــود جميـــــلا&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;الناتج:&lt;/strong&gt; كن جميلا ترى الوجود جميلا&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;3. التحويل إلى الرسم العربي القديم (&lt;code&gt;toOldArabic&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تحول هذه الدالة النص العربي إلى صورته المجردة قبل وضع النقاط على الحروف، مع إزالة التشكيل والهمزات تلقائياً (ويمكنك قراءة الخلفية التاريخية لهذا التطور في مقال &lt;a href=&quot;/blog/arabic-script-history/&quot;&gt;تاريخ الخط العربي منذ ظهور الإسلام&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;في &lt;strong&gt;JavaScript&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { toOldArabic } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(toOldArabic(&amp;#39;الخَيْلُ وَاللّيْلُ وَالبَيْداءُ تَعرِفُني&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String oldScript = ArabicServices.textToOldArabic(&amp;quot;الخَيْلُ وَاللّيْلُ وَالبَيْداءُ تَعرِفُني&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;الناتج:&lt;/strong&gt; الحىل واللىل والٮىدا ٮعرڡٮى&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;4. التمويه البصري للنص الكامل (&lt;code&gt;tashfeer&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تستبدل دالة &lt;code&gt;tashfeer&lt;/code&gt; الحروف العربية بحروف ورموز مشابهة لها في الشكل بحيث يظل النص مقروءاً للعين البشرية:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { tashfeer } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(tashfeer(&amp;#39;هذا النص مشفر&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String obfuscated = ArabicServices.tashfeer(&amp;quot;هذا النص مشفر&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;مثال للمخرجات:&lt;/strong&gt; هـڏן اݪـڼص مشـڤـړ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;5. تشفير الكلمات المحظورة فقط (&lt;code&gt;tashfeerBannedWords&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تعتمد هذه الدالة على قائمة كلمات محظورة شائعة؛ فإذا وُجدَت أي كلمة منها داخل الجملة تقوم بتمويهها وتشفيرها بصرياً فقط مع الإبقاء على بقية كلمات الجملة كما هي:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { tashfeerBannedWords } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(tashfeerBannedWords(&amp;#39;جيش العدو يقتل الأطفال&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String filtered = ArabicServices.tashfeerBannedWords(&amp;quot;جيش العدو يقتل الأطفال&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;مثال للمخرجات:&lt;/strong&gt; چـېـݭ ⴶلـݟـڊۅ يـٯـݖـڵ الأطفال&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;6. تفكيك الكلمة إلى حروفها (&lt;code&gt;wordToLetters&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تحوّل الكلمة العربية إلى أسماء حروفها المنطوقة بشكل واضح:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { wordToLetters } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(wordToLetters(&amp;#39;شجرة&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String letters = ArabicServices.wordToLetters(&amp;quot;شجرة&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;الناتج:&lt;/strong&gt; شين جيم راء تاء_مربوطة&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;7. إزالة اللواحق العربية (&lt;code&gt;removeArabicAffixes&lt;/code&gt;)&lt;/h4&gt;
+&lt;p&gt;تقص السوابق واللواحق الشائعة (مثل &amp;quot;الـ&amp;quot; والتاء المربوطة) من الكلمة العربية للوصول إلى أصل أقرب، بالاعتماد على قواعد تقريبية وليس تحليلاً صرفياً كاملاً:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;JavaScript&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { removeArabicAffixes } from &amp;#39;arabic-services&amp;#39;;
+
+console.log(removeArabicAffixes(&amp;#39;المدرسة&amp;#39;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;وفي &lt;strong&gt;Java&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;code-block&quot; dir=&quot;ltr&quot;&gt;&lt;div class=&quot;code-block-header&quot;&gt;&lt;span class=&quot;code-lang&quot;&gt;Java&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;String stem = ArabicServices.removeArabicAffixes(&amp;quot;المدرسة&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;الناتج:&lt;/strong&gt; مدرس&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3&gt;جرّب الدوال الآن أو تصفّح الشيفرة المصدرية&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;لتجربة كل هذه الوظائف مباشرة داخل المتصفح دون تثبيت: &lt;a href=&quot;/Arabic-Services/&quot;&gt;خدمات اللغة العربية&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;مستودع JavaScript / TypeScript: &lt;a href=&quot;https://github.com/Seen-Arabic/Arabic-Services-JavaScript&quot;&gt;Arabic-Services-JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;مستودع Java: &lt;a href=&quot;https://github.com/Seen-Arabic/Arabic-Services-Java&quot;&gt;Arabic-Services-Java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>تاريخ الخط العربي منذ ظهور الإسلام</title>
     <id>https://seen-arabic.github.io/blog/arabic-script-history/</id>
